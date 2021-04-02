@@ -10,48 +10,54 @@
     <title>Weather App</title>
 </head>
 <body>
-    <div class="container">
-        <div class="weather-app-wrapper">
+<div class="container">
+    <div class="weather-app-wrapper">
         <div class="weather-app">
-        <div class="overview">
-        <h1 id="city">
-        </h1>
-        <ul>
-            <li>
-                Friday 05:00
-            </li>
-            <li id="descritipion"></li>
-        </ul>
-    </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="clearfix weather-temperature">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-                 alt="Cloudy" 
-                 class="float-left"
-                 />
-                <div class="float-left">
-                <strong id="temperature"> </strong><span class="units" >°C| <a href="#" >°F</a>
-                </span >
+            <div class="row">
+                <div class="col-9">
+                    <form id="search-form" class="mb-3">
+                        <input type="search" placeholder="Search for city" class="form-control" id="city-input"
+                            autocomplete="off" />
+                </div>
+                <div class="col-3">
+                    <input type="submit" value="search" class="btn btn-primary w-100" />
+                </div>
             </div>
-         </div>
-     </div>
-            <div class="col-6">
+            </form>
+            <div class="overview">
+                <h1 id="city"></h1>
                 <ul>
-                    <li>Humidity: <span id="humidity"></span>%</li>
-                <li>
-                    Wind: <span id="speed"></span> km/h
-                </li>
+                    <li>Last updated: <span id="date"></span></li>
+                    <li id="description"></li>
                 </ul>
-                </ul>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="clearfix weather-temperature">
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear" class="float-left"
+                            id="icon" />
+                        <div class="float-left">
+                            <strong id="temperature"></strong><span class="units">º <a href="#" id="celsius-link"
+                                    class="active">C </a> | <a href="#" id="fahrenheit-link">ºF</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li>Humidity: <span id="humidity"></span>%</li>
+                        <li>
+                            Wind: <span id="speed"></span> km/h
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-     </div>
+    </div>        
         <small>
            <a href="https://github.com/RenataBarbara/vanilla-weather-app-2" target="_blank"> Open-source code </a> by Renata Kryczka
         </small>
     </div>
  </div>
-<script> src = "src/app.js"</script>
+<script src="src/app.js"></script>
 </body>
 </html>
