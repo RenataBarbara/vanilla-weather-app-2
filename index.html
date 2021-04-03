@@ -14,13 +14,13 @@
     <div class="weather-app-wrapper">
         <div class="weather-app">
             <div class="row">
-                <div class="col-9">
+                <div class="col-10">
                     <form id="search-form" class="mb-3">
                         <input type="search" placeholder="Search for city" class="form-control" id="city-input"
                             autocomplete="off" />
                 </div>
-                <div class="col-3">
-                    <input type="submit" value="search" class="btn btn-primary w-100" />
+                <div class="col-2">
+                    <input type="submit" value="🔍" class="btn btn-light" id="search-city" />
                 </div>
             </div>
             </form>
@@ -37,11 +37,12 @@
                         <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear" class="float-left"
                             id="icon" />
                         <div class="float-left">
-                            <strong id="temperature"></strong><span class="units">º <a href="#" id="celsius-link"
-                                    class="active">C </a> | <a href="#" id="fahrenheit-link">ºF</a></span>
-                        </div>
+                            <div class="float-left">
+                        <strong id="temperature"></strong><span class="units"> °C</span>
+                       </div>
                     </div>
-                    </div>
+                </div>
+            </div>
                         <div class="col-6">
                         <ul>
                                 <li>Humidity: <span id="humidity"></span>%</li>
